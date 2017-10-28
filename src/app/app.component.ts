@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title:string;
+  listaColores:string[];
+  cambiar:boolean;
+
+  constructor() {
+    this.title = 'Beca Angular Everis';
+    this.listaColores = ['amarillo', 'azul', 'negro'];
+    this.cambiar = true;
+  }
+
+  addColor(color) {
+    this.listaColores.push(color.value);
+    return false;
+  }
+
+  launchLista() {
+    this.cambiar = !this.cambiar;
+  }
 }
