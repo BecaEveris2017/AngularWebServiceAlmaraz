@@ -28,6 +28,9 @@ interface IUsers {
   username:string;
   email:string;
   address:address;
+  phone:string;
+  website:string;
+  company:ICompany;
 }
 
 interface address {
@@ -41,4 +44,10 @@ interface address {
 interface IGeo {
   lat:string;
   lng:string;
+}
+
+interface ICompany {
+  name:string;
+  catchPhrase:string;
+  bs:string;
 }
