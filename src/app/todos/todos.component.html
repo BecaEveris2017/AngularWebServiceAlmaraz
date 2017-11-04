@@ -1,8 +1,0 @@
-<div class="to-do" *ngFor='let toDo of toDos'>
-  <h4>To do {{toDo.id}}: {{toDo.title}}</h4>
-  <h5>User {{toDo.userId}}</h5>
-  <h6>
-    Completed: <img *ngIf="toDo.completed" src="https://www.shareicon.net/download/2017/02/24/879486_green_512x512.png" height="22rem" width="22rem">
-    <img *ngIf="!toDo.completed" src="https://www.shareicon.net/data/2015/09/15/101562_incorrect_512x512.png" height="22rem" width="22rem">
-  </h6>
-</div>
