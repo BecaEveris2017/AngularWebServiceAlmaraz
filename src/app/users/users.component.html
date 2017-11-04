@@ -1,23 +1,32 @@
-<h3>
-  Users
-</h3>
-<div *ngFor='let user of users'>
-  <h1>{{user.id}}</h1>
-  <h2>{{user.name}}</h2>
-  <p>{{user.username}}</p>
-  <p>{{user.email}}</p>
-  <h3>Address</h3>
-  <p>{{user.address.street}}</p>
-  <p>{{user.address.suite}}</p>
-  <p>{{user.address.city}}</p>
-  <p>{{user.address.zipcode}}</p>
-  <h4>Geo</h4>
-  <p>{{user.address.geo.lat}}</p>
-  <p>{{user.address.geo.lng}}</p>
-  <p>{{user.phone}}</p>
-  <p>{{user.website}}</p>
-  <h4>Company</h4>
-  <p>{{user.company.name}}</p>
-  <p>{{user.company.catchPhrase}}</p>
-  <p>{{user.company.bs}}</p>
+<button (click)="backUser()" *ngIf="userId > 0">Anterior</button>
+<button (click)="nextUser()" *ngIf="userId < users.length - 1">Siguiente</button>
+<div>
+  <h3>User {{user.id}}: {{user.name}}</h3>
+  <ul>
+      <li>Username: {{user.username}}</li>
+      <li>E-mail: {{user.email}}</li>
+      <li>Address:
+        <ul>
+            <li>Street: {{user.address.street}}</li>
+            <li>Suite: {{user.address.suite}}</li>
+            <li>City: {{user.address.city}}</li>
+            <li>ZIP: {{user.address.zipcode}}</li>
+            <li>Geo:
+              <ul>
+                  <li>Latitud: {{user.address.geo.lat}}</li>
+                  <li>Logitude: {{user.address.geo.lng}}</li>
+              </ul>
+            </li>
+        </ul>
+      </li>
+      <li>Phone: {{user.phone}}</li>
+      <li>WEB: {{user.website}}</li>
+      <li>Company:
+        <ul>
+            <li>Name: {{user.company.name}}</li>
+            <li>Phrase: {{user.company.catchPhrase}}</li>
+            <li>BS: {{user.company.bs}}</li>
+        </ul>
+      </li>
+  </ul>
 </div>

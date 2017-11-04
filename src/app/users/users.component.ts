@@ -9,17 +9,29 @@ import { PostService } from '../post.service';
 })
 export class UsersComponent implements OnInit {
   users: IUsers[];
+  userId = 0;
+  user:IUsers;
 
   constructor(private postService:PostService) { 
     postService.getUsers().subscribe(users=>{
-      console.log(users);
       this.users = users;
+      this.user = this.users[this.userId];
     });
   }
 
   ngOnInit() {
   }
 
+  nextUser() {
+    console.log(this.users.length);
+    this.userId++;
+    this.user = this.users[this.userId];
+  }
+
+  backUser() {
+    this.userId--;
+    this.user = this.users[this.userId];
+  }
 }
 
 interface IUsers {

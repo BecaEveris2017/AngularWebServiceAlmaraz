@@ -12,7 +12,6 @@ export class TodosComponent implements OnInit {
 
   constructor(private postService:PostService) { 
     postService.getToDos().subscribe(toDos=>{
-      console.log(toDos);
       this.toDos = toDos;
     });
   }

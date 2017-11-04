@@ -1,0 +1,63 @@
+.header {
+  background-color: #003;
+  padding: 1.2rem;
+  color: #FFF;
+}
+
+.menu {
+    width: 16rem;
+    float: left;
+}
+
+.contain {
+    width: 65rem;
+    float: right;
+    background-color: #FFF;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.selected {
+    background-color: #CFD8DC !important;
+    color: white;
+}
+.items {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+  color: rgb(0, 30, 85);
+}
+.items li {
+  cursor: pointer;
+  position: relative;
+  left: 0.5em;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  box-shadow: 0.15em 0.1em 0.1em rgba(0, 0, 0, 0.3); 
+}
+.items li.selected:hover {
+  background-color: #BBD8DC !important;
+}
+.items li:hover {
+  color: rgb(255, 159, 34);
+  background-color: rgb(75, 35, 35);
+  box-shadow: 0.15em 0.1em 0.1em rgb(255, 207, 117);
+}
+.items .text {
+  position: relative;
+  top: -3px;
+}
+
+.list-title {
+  color: rgb(255, 135, 22);
+}
+
+hr {
+  border: 2px solid rgb(98, 93, 167); 
+  height: 2px; 
+  background-color: rgb(107, 129, 189);
+}

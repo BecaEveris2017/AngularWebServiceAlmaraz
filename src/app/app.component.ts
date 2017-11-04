@@ -1,28 +1,35 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-main',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title:string;
-  listaColores:string[];
-  cambiar:boolean;
+  itemSelected:Item;
+  title:String;
+  items:Item[];
 
   constructor() {
-    this.title = 'Beca Angular Everis';
-    this.listaColores = ['amarillo', 'azul', 'negro'];
-    this.cambiar = true;
+    this.items = [
+      {id: 0, name: 'Albums'},
+      {id: 1, name: 'Comments'},
+      {id: 2, name: 'Photos'},
+      {id: 3, name: 'Posts'},
+      {id: 4, name: 'To dos'},
+      {id: 5, name: 'Users'},
+    ];
+    this.itemSelected = this.items[0];
+    this.title = this.itemSelected.name;
   }
 
-  addColor(color) {
-    this.listaColores.push(color.value);
-    color.value = '';
-    return false;
+  onSelect(item) {
+    this.itemSelected = item;
+    this.title = this.itemSelected.name;
   }
+}
 
-  launchLista() {
-    this.cambiar = !this.cambiar;
-  }
+export class Item {
+  id:number;
+  name:String;
 }

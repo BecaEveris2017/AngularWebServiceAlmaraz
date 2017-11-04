@@ -12,7 +12,6 @@ export class AlbumsComponent implements OnInit {
 
   constructor(private postService:PostService) { 
     postService.getAlmbums().subscribe(albums=>{
-      console.log(albums);
       this.albums = albums;
     });
   }

@@ -1,0 +1,15 @@
+h4 {
+    color: rgb(50, 49, 114);
+}
+
+ p {
+     font-size: 0.7rem;
+}
+
+.post {
+    border-style: solid;
+    border-color: rgb(235, 235, 235);
+    border-width: 0.1rem;
+    margin: 0.2rem;
+    padding: 0 0.1rem 0 0.3rem;
+}

@@ -1,10 +1,18 @@
-<h3>
-  Photos
-</h3>
-<div *ngFor='let photo of photos'>
-  <h1>{{photo.albumId}}</h1>
-  <h2>{{photo.id}}</h2>
-  <p>{{photo.title}}</p>
-  <p>{{photo.url}}</p>
-  <p>{{photo.thumbnailUrl}}</p>
+
+<div>
+  <div style="margin-bottom: 1rem;">
+    <button (click)="backPhoto()" *ngIf="idPhoto > 0">Anterior</button>
+    <button (click)="nextPhoto()" *ngIf="idPhoto < photos.length - 1">Siguiente</button>
+  </div>
+  <div>
+    <img src={{photo.thumbnailUrl}}>
+    <div class="title">
+      <h1>Album Id: {{photo.albumId}}</h1>
+      <h2>Photo id: {{photo.id}}</h2>
+    </div>
+  </div>
+  <hr>
+  <div class="body">
+    <p><i>Title:</i> {{photo.title}}</p>
+    <img src={{photo.url}}></div>
 </div>

@@ -12,7 +12,6 @@ export class PostsComponent implements OnInit {
 
   constructor(private postService:PostService) { 
     postService.getPosts().subscribe(posts=>{
-      console.log(posts);
       this.posts = posts;
     });
   }

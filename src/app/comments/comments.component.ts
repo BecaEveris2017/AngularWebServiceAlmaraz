@@ -12,7 +12,6 @@ export class CommentsComponent implements OnInit {
 
   constructor(private postService:PostService) { 
     postService.getComments().subscribe(comments=>{
-      console.log(comments);
       this.comments = comments;
     });
   }

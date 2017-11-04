@@ -1,10 +1,6 @@
-<h3>
-  Comments
-</h3>
-<div *ngFor='let comment of comments'>
-  <h1>{{comment.postId}}</h1>
-  <h2>{{comment.id}}</h2>
-  <p>{{comment.name}}</p>
-  <p>{{comment.email}}</p>
-  <p>{{comment.body}}</p>
+<div class="comment" *ngFor='let comment of comments'>
+  <h5>Post id: <i>{{comment.postId}} / {{comment.id}}</i></h5>
+  <h6>{{comment.name}}</h6>
+  <h6>{{comment.email}}</h6>
+  <div class="comment-body"><p>{{comment.body}}</p></div>
 </div>
